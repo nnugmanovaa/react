@@ -1,4 +1,4 @@
-import React, { ReactElement, useState, useRef } from 'react';
+import React, { ReactElement, useState, useRef, useEffect } from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import { recipeList, RecipeModel } from '../../models/Recipe';
 import './details.css'
@@ -8,6 +8,11 @@ interface Props {
 }
 
 export default function RecipeDetails({}: Props): ReactElement {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
+
     const [email, setEmail] = useState("")
     const inputRef = React.useRef<HTMLInputElement>(null)
     const match = useRouteMatch<{ id: string }>();

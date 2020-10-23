@@ -13,7 +13,7 @@ function SaladRecipesList({curRecipeList}: Props): ReactElement {
             <ul>
                 {
                     curRecipeList?.map((recipe) => (
-                        <Link key={recipe.id} to={'/details/' + recipe.id}>
+                        <Link key={recipe.id}  to={'/details/' + recipe.id}>
                         <li>
                             <h1>{recipe.name}</h1>
                             <h3>{recipe.author}</h3>
